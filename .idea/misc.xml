@@ -6,6 +6,7 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/performance-benchmark/pom.xml" />
+        <option value="$PROJECT_DIR$/monitoring-metrics/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
