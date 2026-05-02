@@ -6,8 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="JdkPerformanceMonitoring" />
         <module name="monitoring-metrics" />
+        <module name="JvmPerformanceMonitoring" />
       </profile>
       <profile name="Annotation profile for performance-benchmark" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
