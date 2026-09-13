@@ -2,6 +2,8 @@
 <module version="4">
   <component name="AdditionalModuleElements">
     <content url="file://$MODULE_DIR$" dumb="true">
+      <sourceFolder url="file://$MODULE_DIR$/management-jmx/MXBean" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/performance/memory_solution" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../JvmRuntimeSectionsMetrics/jvm-runtime-tools/javap/main" isTestSource="false" />
     </content>
   </component>

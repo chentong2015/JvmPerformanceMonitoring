@@ -1,0 +1,21 @@
+六种线程状态的统计
+new.count = 0
+blocked.count = 0
+waiting.count = 1
+timed_waiting.count = 1
+runnable.count = 6
+terminated.count = 0
+
+总共有多少线程数量启动
+total_started.count = 8
+count = 8
+
+守护线程数量
+daemon.count = 7
+
+是否出现死锁
+deadlock.count = 0
+deadlocks = []
+
+峰值线程数量(历史最大值)
+peak.count = 8

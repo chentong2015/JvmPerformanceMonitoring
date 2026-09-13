@@ -1,0 +1,63 @@
+关于Heap, MetaSpace等堆内存的使用
+
+heap.committed = 532676608
+heap.init = 532676608
+heap.max = 8480882688
+heap.usage = 4.945598417408506E-4
+heap.used = 4194304
+
+non-heap.committed = 11337728
+non-heap.init = 7667712
+non-heap.max = -1
+non-heap.usage = 0.609346775650289
+non-heap.used = 6909640
+
+pools.CodeHeap-'non-nmethods'.committed = 2949120
+pools.CodeHeap-'non-nmethods'.init = 2555904
+pools.CodeHeap-'non-nmethods'.max = 7667712
+pools.CodeHeap-'non-nmethods'.usage = 0.3798076923076923
+pools.CodeHeap-'non-nmethods'.used = 2912256
+pools.CodeHeap-'non-profiled-nmethods'.committed = 2555904
+pools.CodeHeap-'non-profiled-nmethods'.init = 2555904
+pools.CodeHeap-'non-profiled-nmethods'.max = 122028032
+pools.CodeHeap-'non-profiled-nmethods'.usage = 0.001317467776584318
+pools.CodeHeap-'non-profiled-nmethods'.used = 161536
+pools.CodeHeap-'profiled-nmethods'.committed = 2555904
+pools.CodeHeap-'profiled-nmethods'.init = 2555904
+pools.CodeHeap-'profiled-nmethods'.max = 121962496
+pools.CodeHeap-'profiled-nmethods'.usage = 0.0061154537211176785
+pools.CodeHeap-'profiled-nmethods'.used = 745856
+pools.Compressed-Class-Space.committed = 393216
+pools.Compressed-Class-Space.init = 0
+pools.Compressed-Class-Space.max = 1073741824
+pools.Compressed-Class-Space.usage = 2.786964178085327E-4
+pools.Compressed-Class-Space.used = 299248
+pools.G1-Eden-Space.committed = 29360128
+pools.G1-Eden-Space.init = 29360128
+pools.G1-Eden-Space.max = -1
+pools.G1-Eden-Space.usage = 0.14285714285714285
+pools.G1-Eden-Space.used = 4194304
+pools.G1-Eden-Space.used-after-gc = 0
+pools.G1-Old-Gen.committed = 503316480
+pools.G1-Old-Gen.init = 503316480
+pools.G1-Old-Gen.max = 8480882688
+pools.G1-Old-Gen.usage = 0.0
+pools.G1-Old-Gen.used = 0
+pools.G1-Old-Gen.used-after-gc = 0
+pools.G1-Survivor-Space.committed = 0
+pools.G1-Survivor-Space.init = 0
+pools.G1-Survivor-Space.max = -1
+pools.G1-Survivor-Space.usage = NaN
+pools.G1-Survivor-Space.used = 0
+pools.G1-Survivor-Space.used-after-gc = 0
+
+pools.Metaspace.committed = 3014656
+pools.Metaspace.init = 0
+pools.Metaspace.max = -1
+pools.Metaspace.usage = 0.934493355129076
+pools.Metaspace.used = 2817176
+
+total.committed = 544145408
+total.init = 540344320
+total.max = -1
+total.used = 11138288

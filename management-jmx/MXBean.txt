@@ -1,0 +1,2 @@
+MXBeans: 针对监控的Java对象
+被注册和暴露的JMX MBeans能被监控工具监控(JConsole / VisualVM)

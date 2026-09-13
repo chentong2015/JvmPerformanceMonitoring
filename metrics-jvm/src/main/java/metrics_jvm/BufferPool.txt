@@ -1,0 +1,10 @@
+JVM NIO BufferPool 缓冲区池的使用
+当前JVM有1个Direct ByteBuffer, 占用8192字节的native/off-heap内存
+当前没有使用Memory-Mapped Buffer
+
+direct.capacity = 8192 + 4096
+direct.count = 1 + 1
+direct.used = 8192 + 1
+mapped.capacity = 0
+mapped.count = 0
+mapped.used = 0
