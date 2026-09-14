@@ -1,5 +1,3 @@
-package metrics_jmx;
-
 import io.dropwizard.metrics5.Counter;
 import io.dropwizard.metrics5.MetricRegistry;
 import io.dropwizard.metrics5.jmx.JmxReporter;

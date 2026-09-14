@@ -1,5 +1,4 @@
-TODO. Metrics 指标采集/管理/导出框架
- 底层调用JMX接口来获取到暴露的MBean信息数据
+TODO. Metrics 指标采集/管理/导出框架: 底层调用JMX接口来获取到暴露的MBeans
 
 metrics-core 提供核心的注册器, 指标类型, Reporting等基础能力
 metrics-healthcheck 提供运行环境的安全检查
