@@ -1,0 +1,10 @@
+JMX: Java Management Extensions 一套管理和监控机制/接口
+=> JMX能够查看、监控和管理运行的Java程序
+=> 监控工具通过JMX获取监控信息, 显示在UI界面 !!
+
+MBeanServer: 管理和操作MBean的接口
+JmxMBeanServer: 管理和操作MBean的实现
+
+MBean: 被JMX管理的Java对象
+MXBean: 一类更适合通过JMX暴露数据的MBean
+=> MBean只是众多监控数据中的一个类型 !!

@@ -1,0 +1,8 @@
+Remote程序启动时配置JMX监控端口(是否SSL认证)
+> java -Dcom.sun.management.jmxremote
+   -Dcom.sun.management.jmxremote.port=9010
+   -Dcom.sun.management.jmxremote.authenticate=false
+   -Dcom.sun.management.jmxremote.ssl=false
+   -Xmx8g -jar JavaBatch.jar
+
+使用工具创建远程应用的JMX连接, 对指定的JVM程序进行监控
