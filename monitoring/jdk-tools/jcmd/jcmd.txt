@@ -1,0 +1,16 @@
+TODO. jcmd完整版参考文档 = jmap + jinfo + jstack
+https://docs.oracle.com/javase/8/docs/technotes/guides/troubleshoot/tooldescr006.html
+
+> java -XX:NativeMemoryTracking=summary -jar app.jar
+> jcmd pid VM.native_memory  在开启NMT参数后，查看Native内存的信息
+
+> jcmd pid GC.class_stats 输出加载的类在内存中的占用信息
+  print the detailed information about memory usage of each loaded class.
+
+> jcmd pid GC.heap_dump <file-path>
+> jcmd pid GC.heap_dump filename=Myheapdump  堆快照hprof dump
+
+jcmd生成JFR事件分析文件
+> jcmd <pid> JFR.start name=custProfile settings=default
+> jcmd <pid> JFR.dump filename=custProfile.jfr
+> jcmd <pid> JFR.stop
