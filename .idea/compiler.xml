@@ -7,7 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="jvm-statistics" />
-        <module name="metrics" />
+        <module name="jvm-metrics" />
       </profile>
       <profile name="Annotation profile for performance-benchmark" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
