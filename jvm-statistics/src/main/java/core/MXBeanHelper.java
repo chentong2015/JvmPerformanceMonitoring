@@ -1,4 +1,4 @@
-package utils;
+package core;
 
 public class MXBeanHelper {
 

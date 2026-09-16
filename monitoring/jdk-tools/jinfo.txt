@@ -95,12 +95,6 @@ VM Flags: 相关JVM配置参数/标签
    -XX:+UseG1GC
    -XX:-UseLargePagesIndividualAllocation
 
-VM Arguments: 自定义JVM参数信息
-   jvm_args: -Dfile.encoding=UTF-8 -Xmx8g -Xmn4G
-   java_command: JavaBatch.jar -options=JavaBatch.cfg
-   java_class_path (initial): JavaBatch.jar
-   Launcher Type: SUN_STANDARD
-
 VM Flags: Linux Server参数配置信息
   -XX:CICompilerCount=3 -XX:ConcGCThreads=1 -XX:G1ConcRefinementThreads=4
   -XX:G1HeapRegionSize=1048576 -XX:GCDrainStackTargetSize=64
@@ -113,3 +107,9 @@ VM Flags: Linux Server参数配置信息
   -XX:+UseCompressedClassPointers -XX:+UseCompressedOops
   -XX:+UseFastUnorderedTimeStamps -XX:+UseG1GC --> Java15默认使用G1收集器
   -XX:-UseLargePagesIndividualAllocati
+
+VM Arguments: 自定义JVM参数信息
+   jvm_args: -Dfile.encoding=UTF-8 -Xmx8g -Xmn4G
+   java_command: JavaBatch.jar -options=JavaBatch.cfg
+   java_class_path (initial): JavaBatch.jar
+   Launcher Type: SUN_STANDARD

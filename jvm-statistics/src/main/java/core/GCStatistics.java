@@ -1,4 +1,4 @@
-package jvm;
+package core;
 
 import model.AbstractStatistic;
 import model.StatisticsSink;

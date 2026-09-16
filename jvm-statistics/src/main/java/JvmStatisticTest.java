@@ -1,20 +1,16 @@
-import jvm.ClassStatistics;
-import jvm.ThreadStatistics;
+import core.ClassStatistics;
+import core.OsCpuStatistics;
+import core.ThreadStatistics;
 import model.StatisticsSink;
 import model.StatisticsSinkConsole;
 
 import java.lang.management.ManagementFactory;
-import java.lang.management.OperatingSystemMXBean;
 
 public class JvmStatisticTest {
 
     public static void main(String[] args) {
-        // The management interface for the operating system on which the Java virtual machine is running.
-        OperatingSystemMXBean operatingSystem = ManagementFactory.getOperatingSystemMXBean();
-        System.out.println(operatingSystem.getName());
-        System.out.println(operatingSystem.getArch());
-        System.out.println(operatingSystem.getSystemLoadAverage());
-        System.out.println(operatingSystem.getAvailableProcessors());
+        OsCpuStatistics osCpuStatistics = new OsCpuStatistics("OS CPU");
+        osCpuStatistics.innerCollect(new StatisticsSinkConsole());
 
         StatisticsSink<Object> statisticsSink = new StatisticsSinkConsole();
 

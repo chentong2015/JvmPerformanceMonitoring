@@ -1,4 +1,4 @@
-TODO. JVM默认暴露大量JMX MBean
+TODO. JVM默认暴露大量JMX MBean, 可直接获取
 代码层面通过java.lang.management.xxxBean获取信息
 ─ MemoryMXBean: Heap Memory/Non-Heap Memory
 ─ ThreadMXBean
@@ -14,8 +14,6 @@ import sun.management.counter.Counter;
 --add-exports java.management/sun.management=ALL-UNNAMED
 --add-exports java.management/sun.management.counter=ALL-UNNAMED
 
-TODO. 通过oshi依赖获取OS系统和硬件平台信息
+TODO. 通过oshi-core依赖获取OS系统和硬件平台信息
 Native Operating System and Hardware Information
 Cross-platform implementation to retrieve system information: version, memory, CPU, disk, battery,,
-
-https://github.com/oshi/oshi

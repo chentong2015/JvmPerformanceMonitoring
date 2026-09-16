@@ -1,7 +1,6 @@
 package hardware;
 
 import model.AbstractStatistic;
-import utils.LinuxHelper;
 import oshi.SystemInfo;
 import oshi.software.os.OSProcess;
 import oshi.software.os.OperatingSystem;

@@ -1,4 +1,4 @@
-package jvm;
+package core;
 
 import io.dropwizard.metrics5.MetricRegistry;
 import io.dropwizard.metrics5.jvm.*;
