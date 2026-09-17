@@ -1,0 +1,9 @@
+TODO. 直接通过命令行来生成jfr飞行数据
+> jcmd <PID> JFR.start
+> jcmd <PID> JFR.check
+> jcmd <PID> JFR.configure
+> jcmd <PID> JFR.stop
+
+记录某段时间的事件到文件中
+> jcmd 12952 JFR.start duration=60s filename=/tmp/app.jfr
+> jcmd 12952 JFR.start settings=/opt/jfr/mysettings.jfc filename=/tmp/app.jfr duration=60s

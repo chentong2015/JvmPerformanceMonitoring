@@ -1,0 +1,10 @@
+TODO. 获取Heap Dump各种方式
+- -XX:+HeapDumpOnOutOfMemoryError
+
+- jcmd
+- jmap
+
+- JConsole - JMX
+- HotSpotDiagnosticMXBean.dumpHeap() - JMX
+
+- VisualVM

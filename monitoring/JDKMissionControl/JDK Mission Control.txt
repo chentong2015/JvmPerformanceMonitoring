@@ -1,3 +1,6 @@
-Java Mission Control
+JDK Mission Control
+- 支持监控JFR记录器记录的数据(更丰富的监控信息)
+- 支持运行丰富的Diagnostic诊断命令
+
 https://www.oracle.com/java/technologies/javase/products-jmc8-downloads.html
 https://www.oracle.com/java/technologies/jdk-mission-control.html

@@ -1,0 +1,6 @@
+JProfiler:
+Professional tool for analyzing what is going on inside a running JVM
+- Install JProfiler
+- Install JProfiler Plugin for IDEA
+
+https://www.ej-technologies.com/resources/jprofiler/help/doc/main/introduction.html
