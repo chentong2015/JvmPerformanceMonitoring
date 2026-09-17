@@ -1,0 +1,14 @@
+TODO. jcmd: Java运行时信息诊断和输出工具
+https://docs.oracle.com/en/java/javase/17/docs/specs/man/jcmd.html
+
+> jcmd 列出当前机器上Java进程
+
+> jcmd pid VM.version
+
+> jcmd pid VM.system_properties 输出系统属性 => 等效于jinfo
+
+> jcmd pid Thread.print    输出线程的运行状态 => 等效于jstack
+
+> jcmd pid GC.class_histogram 输出加载的类的内存情况
+
+> jcmd pid GC.heap_dump C:/temp/myHeapDumpName.hprof 输出Heap Dump到文件

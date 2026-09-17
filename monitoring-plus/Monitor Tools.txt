@@ -1,0 +1,21 @@
+Java Troubleshooting:
+https://docs.oracle.com/en/java/javase/17/troubleshoot/general-java-troubleshooting.html
+
+Standard Java Profilers
+  1. Java VisualVM
+  2. Java Mission Control
+  3. NetBeans Profiler
+  4. JProfiler
+  5. YourKit Profiler 支持监控慢SQL和HTTP请求
+
+Lightweight Java Transaction Profilers
+  6. xRebel
+  7. LightStep
+
+Application Performance Management (APM)
+  8. Glowroot
+  9. Pinpoint
+  10. JavaMelody JEE Web完整监控平台
+  11. Scouter
+  12. Stagemonitor
+  13. MoSKito

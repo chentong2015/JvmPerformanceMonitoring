@@ -1,0 +1,11 @@
+TODO. JDK Config
+1. 配置etc/visualvm.conf文件中visualvm_jdkhome=path, 双击启动
+2. 通过命令行启动, 设置--jdkhome参数值
+   > ./bin/visualvm --jdkhome=path
+
+TODO. Plugins
+添加Visual GC插件, 查看内存的变化和GC回收
+添加VisualVM-MBeans插件, 插件暴露的MBean对象信息
+
+https://visualvm.github.io/gettingstarted.html
+https://visualvm.github.io/startupprofiler.html

@@ -1,0 +1,5 @@
+TODO. jmap: Java运行时信息映射(到文件)工具
+
+> jmap -clstats PID 输出类加载器
+
+> jmap -dump:live,file=heap_content.hprof PID 输出Heap Dump到文件, 默认项目根目录

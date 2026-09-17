@@ -2,14 +2,15 @@
   Usage: javap <options> <classes>
   where possible options include:
   --help -help -h -?               Print this help message
-  -version                         Version information
+  -version                         Print Version information
   -v  -verbose                     Print additional information 提供关于类的额外信息
+  -c                               Disassemble the code 反汇编生成的.class文件
+
   -l                               Print line number and local variable tables
   -public                          Show only public classes and members
   -protected                       Show protected/public classes and members
   -package                         Show package/protected/public classes and members (default)
   -p  -private                     Show all classes and members
-  -c                               Disassemble the code 反汇编生成的.class文件
   -s                               Print internal type signatures
   -sysinfo                         Show system info (path, size, date, SHA-256 hash) of class being processed
   -constants                       Show final constants
