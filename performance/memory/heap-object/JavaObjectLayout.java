@@ -1,12 +1,17 @@
-package object_layout;
+// import org.openjdk.jol.info.ClassLayout;
+// import org.openjdk.jol.vm.VM;
 
-import org.openjdk.jol.info.ClassLayout;
-import org.openjdk.jol.vm.VM;
-
+//  Java Object Layout Core 输出对象在内存的存储
+//  <dependency>
+//      <groupId>org.openjdk.jol</groupId>
+//      <artifactId>jol-core</artifactId>
+//      <version>0.17</version>
+//      <scope>compile</scope>
+//  </dependency>
 public class JavaObjectLayout {
 
     public static void main(String[] args) {
-        System.out.println(VM.current().details());
+        // System.out.println(VM.current().details());
 
         // runtime_memory.object_layout.JavaObjectLayout$StorageClass object internals:
         // OFF  SZ                                            TYPE DESCRIPTION              VALUE
@@ -17,7 +22,7 @@ public class JavaObjectLayout {
         // 20   4   runtime_memory.object_layout.JavaObjectLayout StorageClass.this$0       N/A
         // Instance size: 24 bytes
         // Space losses: 0 bytes internal + 0 bytes external = 0 bytes total
-        System.out.println(ClassLayout.parseClass(StorageClass.class).toPrintable());
+        // System.out.println(ClassLayout.parseClass(StorageClass.class).toPrintable());
 
         // runtime_memory.object_layout.JavaObjectLayout$StorageClass object internals:
         // OFF  SZ               TYPE DESCRIPTION              VALUE
@@ -29,7 +34,7 @@ public class JavaObjectLayout {
         // Instance size: 24 bytes
         // Space losses: 0 bytes internal + 4 bytes external = 4 bytes total
         StorageClass storageClass = new StorageClass(1, "execution_engine/garbage_collector/test");
-        System.out.println(ClassLayout.parseInstance(storageClass).toPrintable());
+        // System.out.println(ClassLayout.parseInstance(storageClass).toPrintable());
 
         // OFF  SZ   TYPE DESCRIPTION              VALUE
         //  0   8        (object header: mark)     0x0000000000000001 (non-biasable; age: 0) 对象头
@@ -40,7 +45,7 @@ public class JavaObjectLayout {
         // Instance size: 32 bytes                            实际总大小
         // Space losses: 0 bytes internal + 4 bytes external = 4 bytes total
         int[] arr = {1, 2, 3};
-        System.out.println(ClassLayout.parseInstance(arr).toPrintable());
+        // System.out.println(ClassLayout.parseInstance(arr).toPrintable());
     }
 
     static class StorageClass {
