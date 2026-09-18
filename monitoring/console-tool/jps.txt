@@ -1,5 +1,5 @@
 TODO. JVM Process Status 获取系统进程状态
-> jps -q  仅获取PID
+> jps -q  仅获取PID进程ID
 
 > jps -l  查看PID和主类名或JAR名
   7858  /home/centos/app.jar              // This is our app
