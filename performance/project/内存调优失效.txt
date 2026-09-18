@@ -5,7 +5,7 @@ JVM默认会根据容器限制的内存来推算最大堆，而不是你机器�
 -XX:+UnlockExperimentalVMOptions
 -XX:+UseContainerSupport(JDK 10+ 默认启用)
 
-TODO. JVM -Xmx参数限制: 无法在Runtime运行时自动扩容或动态修改
+TODO. -Xmx参数无法在Runtime运行时自动扩容或动态修改
 Current issue: it is not possible to increase the size of Java heap at runtime_memory_outside.
 The only one way to increase the Heap size is to restart the JVM with a new -Xmx parameter.
 1. 如果重启JVM会导致停机中断的代价

@@ -1,5 +1,3 @@
-package garbage_collection.memory_leak;
-
 import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;

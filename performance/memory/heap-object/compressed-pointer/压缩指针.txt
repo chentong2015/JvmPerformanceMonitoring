@@ -1,0 +1,20 @@
+TODO. 两类压缩指针: 通过指针寻址导致物理存储的数据
+1. Compressed Class Pointers (Klass Pointer)
+   默认开启, 依赖Object Pointer指针的开启
+
+2. Compressed Oops (ordinary object pointer)
+   默认开启, 普通对象指针指向Heap中存储对象
+   -XX:+UseCompressedOops  开启Compressed Oops
+   -XX:-UseCompressedOops  关闭Compressed Oops
+
+TODO. 压缩指针作用: 仅适用于64-bit JVM
+当Heap堆空间小于压缩指针的寻址范围时能有效的提升程序性能
+With compressed oops enabled, object references are represented as 32-bit offsets instead of 64-bit pointers,
+which typically increases performance when running the application with Java heap sizes
+smaller than the compressed oops pointer range.
+
+TODO. 压缩指针原理: 使用32 bits指针来寻址, 最大寻址空间为32GB
+HotSpot的对象对齐: 每个Java对象的起始地址必须是8的倍数, 最低3 bit永远是000 !!
+指针的大小: 2^32 bits
+每个寻址地址对象大小: 8 bytes
+指针能够寻址的总内存: 2^32 * 8 bytes = 2^25 KB = 2^15 MB = 2^5 GB = 32 GB

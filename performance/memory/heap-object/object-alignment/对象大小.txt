@@ -1,0 +1,28 @@
+TODO. 对象存储的大小必须是对齐大小的整数倍
+从计算机内部的寻址上考虑，补齐完整的"8个字节整数倍"更有利于寻址的高效，避免过多的计算地址偏移量
+
+空对象: 类型没有属性
+- 开启指针压缩: 8字节(Mark Word) + 4字节(Klass Pointer) + 4字节(对齐填充) = 16字节
+- 未开启指针压缩: 8字节(Mark Word) + 8字节(Klass Pointer) + 0字节 = 16字节
+
+非空对象:
+- 开启指针压缩: 8 + 4 + 8(2个int类型的属性) + 4 = 24字节
+- 未开启指针压缩: 8 + 8 + 8(2个int类型的属性) + 0 = 24字节
+
+TODO. 带对象指针的对象存储
+class Person {
+    String name;
+    Address address;
+}
++----------------+
+| mark word      | 8 bytes
++----------------+
+| klass pointer  | 4 bytes  ← compressed class pointer
++----------------+
++----------------+
+| name           | 4 bytes  ← compressed oop (object pointer)
++----------------+
+| address        | 4 bytes  ← compressed oop (object pointer)
++----------------+
+| padding        | 4 bytes
++----------------+

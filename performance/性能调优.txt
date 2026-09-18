@@ -1,6 +1,16 @@
-TODO. 系统性能的不同层面
-系统的性能问题受到多个方面的影响，有多种参数共同决定
+TODO. 系统性能调优层次:
 1. 应用程序层面: 多线程问题，代码bug(读写异常)，复杂度高
 2. 架构层面分析: 模块和组件，LB负载异常，分布式策略
 3. 数据库层面: 连接池问题，SQL耗时，事务问题，DB配置
 4. 系统OS层面: CPU资源，内存限制，网络延迟问题
+
+TODO. JVM 调优的两大方面: Heap堆 + GC的使用
+1. 使用大内存(>64G)，但minor gc仍然需要优化
+   Eden(30G)内存太大，做GC依然需要时间，同时还会STW
+
+2. 选择合适的垃圾收集器，设置合适参数
+   设置短的停顿时间，一次只回收Eden区部分(2G-3G)，回收和使用交替
+   单次的Minor GC时间减少，避免客户端的超时重发
+
+Java Troubleshooting
+https://docs.oracle.com/en/java/javase/17/troubleshoot/general-java-troubleshooting.html

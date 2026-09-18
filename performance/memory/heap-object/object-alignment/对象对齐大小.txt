@@ -1,0 +1,13 @@
+TODO. 设置对象的对齐大小(in bytes)
+-XX:ObjectAlignmentInBytes=alignment
+
+默认为8 bytes, 且只能取以下数值:
+8, 16, 32, 64, 128, 256
+
+结合指针压缩使用, 在大Heap堆空间(>32GB)中提高性能
+This option makes it possible to use compressed pointers with large Java heap sizes.
+The heap size limit in bytes is calculated as: 4GB * ObjectAlignmentInBytes
+
+TODO. 增加对齐大小会造成空间浪费(padding补太多)
+As the alignment value increases, the unused space between objects also increases.
+you may not realize any benefits from using compressed pointers with large Java heap sizes.
