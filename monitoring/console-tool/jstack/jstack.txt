@@ -1,10 +1,18 @@
-Jstack 打印进程中线程信息/自动分析死锁
-
-jstack [-l][-e] PID
+jstack [-l][-e] PID  打印进程中线程信息/自动分析死锁
 -l  long listing.
     Prints additional information about locks
-
 -e  extended listing.
     Prints additional information about threads
     Prints the stack traces of all java threads for a given process or core dump.
     Each thread consists of a header and a stack trace
+
+TODO. 在Linux环境排查高CPU的线程
+> jps
+> jstack <pid>
+  "Thread-1" #12 prio=5 os_prio=0 tid=0x00007f8a6800a800 nid=0x5166
+> printf "%d\n" <nid> (jstack显示的十六进制转换十进制)
+
+> top -H -p <PID>     查找进程中高CPU的线程ID
+  PID    TID     %CPU
+  12345  20838   95.0
+> printf "%x\n" 20838 (top -H显示的十进制ID转换十六进制)
