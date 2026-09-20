@@ -1,3 +1,5 @@
+package roots;
+
 import base.InnerClassField;
 import base.OuterClass;
 
@@ -7,11 +9,18 @@ public class GcRootObject {
     // 当InnerClassField对象变成“从任何GC Root都不可达”时，才具有被GC自动回收的资格 !!
     private final InnerClassField innerObject = new InnerClassField();
 
+    private static InnerClassField innerObjectStatic = new InnerClassField();
+
     public static void main(String[] args) {
         // TODO. 这里创建的线程栈局部变量才是GC Root
         // 只要该局部对象可达(存在)，则它属性所引用的对象就不能被GC !!
         GcRootObject gcRootDemo = new GcRootObject();
-        gcRootDemo.testGcCollectObject();
+
+        gcRootDemo.testGcCollectObject(); // sleep
+
+        // 确保gcRootDemo依然是活跃变量 => 通过Heap Dump查看GC Roots对象
+        System.out.println(gcRootDemo);
+        System.out.println(innerObjectStatic);
 
         // 理论上: 当局部变量置空时，InnerClassField对象也不可达
         gcRootDemo = null;
@@ -27,7 +36,17 @@ public class GcRootObject {
         new Thread(() -> {
             // TODO. 在run()方法的实现中创建的局部变量也是GC Root
             OuterClass outerClass = new OuterClass(innerObject, "name thread");
+            doSleep();
             System.out.println(outerClass);
         }).start();
+        doSleep();
+    }
+
+    private void doSleep() {
+        try {
+            Thread.sleep(600000);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

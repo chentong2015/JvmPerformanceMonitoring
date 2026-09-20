@@ -1,3 +1,5 @@
+package roots;
+
 import base.InnerClassField;
 
 public class GcRootStatic {
