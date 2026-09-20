@@ -1,0 +1,51 @@
+TODO. GC调优策略: 减少GC次数，降低GC Pause中断时间
+- 选择合适的垃圾收集器(适配不同的场景)
+- 设置合适XX选项, 控制GC的执行效果
+
+TODO. 垃圾回收Flags全集:
+> java -XX:+PrintFlagsFinal -version | grep -i gc
+  bool UseG1GC                               = true                     {product} {ergonomic}
+  bool UseParallelGC                         = false                    {product} {default}
+  bool UseSerialGC                           = false                    {product} {default}
+  bool UseShenandoahGC                       = false                    {product} {default}
+  bool UseZGC                                = false                    {product} {default}
+
+  uint ParallelGCThreads                     = 15                       {product} {default}
+  uint ConcGCThreads                         = 4                        {product} {ergonomic}
+  uintx MaxGCPauseMillis                     = 200                      {product} {default}
+  ccstr ShenandoahGCHeuristics               = adaptive                 {product} {default}
+  ccstr ShenandoahGCMode                     = satb                     {product} {default}
+
+  bool PrintGC                               = false                    {product} {default}
+  bool PrintGCDetails                        = false                    {product} {default}
+
+  uintx AdaptiveSizeMajorGCDecayTimeScale    = 10                       {product} {default}
+  bool DisableExplicitGC                     = false                    {product} {default}
+  bool ExplicitGCInvokesConcurrent           = false                    {product} {default}
+  size_t G1ConcRSLogCacheSize                = 10                       {product} {default}
+  uintx G1MixedGCCountTarget                 = 8                        {product} {default}
+  uintx G1PeriodicGCInterval                 = 0                     {manageable} {default}
+  bool G1PeriodicGCInvokesConcurrent         = true                     {product} {default}
+  double G1PeriodicGCSystemLoadThreshold     = 0.000000              {manageable} {default}
+  uintx GCDrainStackTargetSize               = 64                       {product} {ergonomic}
+  uintx GCHeapFreeLimit                      = 2                        {product} {default}
+  uintx GCLockerEdenExpansionPercent         = 5                        {product} {default}
+  uintx GCPauseIntervalMillis                = 201                      {product} {default}
+  uintx GCTimeLimit                          = 98                       {product} {default}
+  uintx GCTimeRatio                          = 12                       {product} {default}
+  bool HeapDumpAfterFullGC                   = false                 {manageable} {default}
+  bool HeapDumpBeforeFullGC                  = false                 {manageable} {default}
+  size_t HeapSizePerGCThread                 = 43620760                 {product} {default}
+  intx LiveNodeCountInliningCutoff           = 40000                 {C2 product} {default}
+  uintx MaxGCMinorPauseMillis                = 18446744073709551615     {product} {default}
+  bool OptimizeStringConcat                  = true                  {C2 product} {default}
+  int ParGCArrayScanChunk                    = 50                       {product} {default}
+  uintx ParallelGCBufferWastePct             = 10                       {product} {default}
+  intx PerfMaxStringConstLength              = 1024                     {product} {default}
+  uintx QueuedAllocationWarningCount         = 0                        {product} {default}
+  bool ScavengeBeforeFullGC                  = false                    {product} {default}
+  bool UseAdaptiveSizeDecayMajorGCCost       = true                     {product} {default}
+  bool UseAdaptiveSizePolicyWithSystemGC     = false                    {product} {default}
+  bool UseDynamicNumberOfGCThreads           = true                     {product} {default}
+  bool UseGCOverheadLimit                    = true                     {product} {default}
+  bool UseMaximumCompactionOnSystemGC        = true                     {product} {default}
