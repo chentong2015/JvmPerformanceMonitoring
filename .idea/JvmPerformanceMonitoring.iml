@@ -10,6 +10,7 @@
       <sourceFolder url="file://$MODULE_DIR$/performance/memory/heap-object" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/performance/memory/out-of-memory" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/performance/garbage-collection" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/performance/project" isTestSource="false" />
     </content>
   </component>
 </module>
