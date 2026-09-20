@@ -13,6 +13,10 @@ TODO. 发生OOM的三个JVM运行时内存区域
 
 3. Heap 堆空间OOM溢出 -> java.lang.OutOfMemoryError Java heap space
    产生条件: 创建的对象通常存储在堆空间，当持续创建过多或无法被GC回收的对象时，会造成堆空间被填满
+   泄露场景:
+   - 堆内存过小(或设置过小)，无法满足程序的运行需求
+   - 长期产生无法GC的对象，从GC Roots起点可达
+   - 数据资源泄露(对象没有即时清理)，例如DB连接未关闭
    解决方法:
    - Set Maximum heap size 增加堆空间大小
    - Dump heap memory      分析内存堆中数据
