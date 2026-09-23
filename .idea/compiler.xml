@@ -24,15 +24,10 @@
         <module name="bench-truncation" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="bench-inputstream" target="17" />
-      <module name="examples" target="17" />
-      <module name="jvm-runtime-healthcheck" target="17" />
-      <module name="jvm-runtime-sections" target="17" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="JvmPerformanceMonitoring" options="--add-exports java.base/jdk.internal.vm.annotation=ALL-UNNAMED" />
       <module name="jvm-statistics" options="--add-exports java.management/sun.management=ALL-UNNAMED" />
     </option>
   </component>
