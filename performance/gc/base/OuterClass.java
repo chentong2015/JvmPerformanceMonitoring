@@ -1,4 +1,4 @@
-package gc_roots.base;
+package base;
 
 public class OuterClass {
 

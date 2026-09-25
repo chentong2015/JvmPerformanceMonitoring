@@ -9,9 +9,10 @@
       <sourceFolder url="file://$MODULE_DIR$/performance/memory/dynamic" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/performance/memory/heap-object" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/performance/memory/out-of-memory" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/performance/garbage-collection" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/performance/project" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/performance/memory/stack-reserved" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/performance/gc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/performance/gc_optimization" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/performance/memory_optimization" isTestSource="false" />
     </content>
   </component>
 </module>

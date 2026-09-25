@@ -4,8 +4,8 @@ TODO. JDK Configuration
    > ./bin/visualvm --jdkhome=path
 
 TODO. Plugins
-添加Visual GC插件, 查看内存的变化和GC回收
-添加VisualVM-MBeans插件, 插件暴露的MBean对象信息
+添加Visual GC插件: 查看内存的和GC回收 => 不支持ShenandoahGC
+添加VisualVM-MBeans插件: 暴露的MBean对象信息
 
 https://visualvm.github.io/gettingstarted.html
 https://visualvm.github.io/startupprofiler.html

@@ -1,9 +1,7 @@
-package gc_roots;
+import base.InnerClassField;
+import base.OuterClass;
 
-import gc_roots.base.InnerClassField;
-import gc_roots.base.OuterClass;
-
-public class GcRootObject {
+public class GcRootsObject {
 
     // TODO. 这个实例字段本身不是GC Root
     // 当InnerClassField对象变成“从任何GC Root都不可达”时，才具有被GC自动回收的资格 !!
@@ -14,7 +12,7 @@ public class GcRootObject {
     public static void main(String[] args) {
         // TODO. 这里创建的线程栈局部变量才是GC Root
         // 只要该局部对象可达(存在)，则它属性所引用的对象就不能被GC !!
-        GcRootObject gcRootDemo = new GcRootObject();
+        GcRootsObject gcRootDemo = new GcRootsObject();
 
         gcRootDemo.testGcCollectObject(); // sleep
 
@@ -26,7 +24,7 @@ public class GcRootObject {
         gcRootDemo = null;
 
         // 理论上: 重新创建对象，InnerClassField对象也会被重新创建
-        gcRootDemo = new GcRootObject();
+        gcRootDemo = new GcRootsObject();
 
         // 当方法执行结束返回后，不可达的InnerClassField对象自动被回收
     }
@@ -40,6 +38,16 @@ public class GcRootObject {
             System.out.println(outerClass);
         }).start();
         doSleep();
+    }
+
+    // 两个对象各自拥有字节的实例字段(引用不同的对象)
+    // ObjectsA对象的删除不影响ObjectsB对象字段的引用对象
+    public void testMultiObjects() {
+        GcRootsObject gcRootDemo1 = new GcRootsObject();
+        GcRootsObject gcRootDemo2 = new GcRootsObject();
+
+        doSleep();
+        gcRootDemo1 = null;
     }
 
     private void doSleep() {

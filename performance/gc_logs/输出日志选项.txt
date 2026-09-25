@@ -1,0 +1,16 @@
+TODO. 根据G1日志性分析性能: Young GC 或 Mixed GC
+-verbosegc
+
+-XX:+PrintGC
+[GC pause (G1 Humongous Allocation) (young) (initial-mark) 24M- >21M(64M), 0.2349730 secs]
+[GC pause (G1 Evacuation Pause) (mixed) 66M->21M(236M), 0.1625268 secs]
+
+-XX:+PrintGCDetails 分析每个区域的具体回收情况
+[Ext Root Scanning (ms): Avg: 1.7 Min: 0.0 Max: 3.7 Diff: 3.7]
+[Eden: 818M(818M)->0B(714M) Survivors: 0B->104M Heap: 836M(4096M)->409M(4096M)]
+
+-XX:+PrintGCTimeStamps
+1.729: [GC pause (young) 46M->35M(1332M), 0.0310029 secs]
+
+-XX:+PrintGCDateStamps
+2012-05-02T11:16:32.057+0200: [GC pause (young) 46M->35M(1332M), 0.0317225 secs]

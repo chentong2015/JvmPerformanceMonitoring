@@ -1,6 +1,10 @@
-TODO. GC调优策略: 减少GC次数，降低GC Pause中断时间
+GC调优策略: 减少GC次数，降低GC Pause中断时间
 - 选择合适的垃圾收集器(适配不同的场景)
 - 设置合适XX选项, 控制GC的执行效果
+
+Shenandoah GC可视化工具: JMC支持
+https://github.com/openjdk/shenandoah-visualizer
+
 
 TODO. 垃圾回收Flags全集:
 > java -XX:+PrintFlagsFinal -version | grep -i gc
