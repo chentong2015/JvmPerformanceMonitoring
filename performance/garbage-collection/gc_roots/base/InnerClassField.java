@@ -1,4 +1,4 @@
-package base;
+package gc_roots.base;
 
 import java.util.ArrayList;
 import java.util.List;

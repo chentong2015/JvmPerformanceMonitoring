@@ -1,6 +1,6 @@
-package roots;
+package gc_roots;
 
-import base.InnerClassField;
+import gc_roots.base.InnerClassField;
 
 public class GcRootStatic {
 

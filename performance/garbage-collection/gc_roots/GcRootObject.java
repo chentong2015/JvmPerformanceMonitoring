@@ -1,7 +1,7 @@
-package roots;
+package gc_roots;
 
-import base.InnerClassField;
-import base.OuterClass;
+import gc_roots.base.InnerClassField;
+import gc_roots.base.OuterClass;
 
 public class GcRootObject {
 

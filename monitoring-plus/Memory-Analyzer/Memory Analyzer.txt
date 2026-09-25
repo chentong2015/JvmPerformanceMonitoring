@@ -2,3 +2,8 @@ Eclipse Memory Analyzer (MAT)
 Powerful tool designed to analyze Java heap dumps and help devs understand memory usage.
 - Analyze heap dumps taken from Java applications
 - Identify memory leaks, high memory usage, and object retention
+
+MAT will be launched by default with -Xmx1024m.
+In case the memory dump file is big, and MAT is going OutOfMemory, you need to increase the Xmx. It could bedone with 2 ways:
+1. Modifying the Xmx under the file MemoryAnalyzer.ini.
+2. Adding the following arguments to the launching command: -vmargs –Xmx4g
