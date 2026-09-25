@@ -1,5 +1,11 @@
-TODO. jmap: Java运行时信息映射(到文件)工具
+TODO. jmap: Java运行时信息映射(到文件) => deprecated/experimental工具
 
-> jmap -clstats PID 输出类加载器
+> jmap -clstats <pid>                     print class loader statistics
+> jmap -finalizerinfo <pid>               print information on objects awaiting finalization
 
-> jmap -dump:live,file=heap_content.hprof PID 输出Heap Dump到文件, 默认项目根目录
+> jmap -histo[:[<histo-options>]] <pid>   print histogram of java object heap
+> jmap -histo:live                        输出堆中对象的情况
+
+> jmap -dump:<dump-options> <pid>               dump java heap
+> jmap -dump:live,file=heap_content.hprof PID   输出Heap Dump到文件, 默认项目根目录
+> jmap -dump:format=b,file=heap.dump.hprof $PID

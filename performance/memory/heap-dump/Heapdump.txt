@@ -4,7 +4,7 @@ TODO. 获取Heap Dump各种方式
 - jcmd
 - jmap
 
-- JConsole - JMX
-- HotSpotDiagnosticMXBean.dumpHeap() - JMX
+- JConsole - JMX 通过MBeans界面操作
+- HotSpotDiagnosticMXBean.dumpHeap() - JMX 代码层级执行
 
-- VisualVM
+- VisualVM 点击执行Heap Dump
